@@ -22,7 +22,7 @@ struct CtaViewList: View {
             }
             .tint(.blue.mix(with: .white, amount: 0.5))
             .listRowBackground(Color.clear)
-            Section (header: sectionLegend){
+            Section(header: sectionLegend) {
                 List {
                     ForEach(1..<6) { _ in
                         if UIDevice.current.userInterfaceIdiom == .pad {
@@ -45,7 +45,7 @@ struct CtaViewList: View {
     }
 
     var explaination: some View {
-        VStack (alignment: .leading) {
+        VStack(alignment: .leading) {
             HStack {
                 Image(systemName: "heart")
                 Text("- standard button with no state feedback (spammable)")

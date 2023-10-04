@@ -1,6 +1,5 @@
 //
 //  SecureTextFieldWithReveal.swift
-//  carolinegirvan
 //
 //  Created by Stoyan Stoyanov on 20/05/22.
 //  Copyright © 2022 hedgehog lab. All rights reserved.
@@ -22,7 +21,7 @@ struct SecureTextFieldWithReveal: View {
         self.contentType = contentType
         self._text = text
     }
-    
+
     var body: some View {
         HStack {
             textField
@@ -60,7 +59,7 @@ struct SecureTextFieldWithReveal: View {
 }
 
 struct SecureTextFieldWithReveal_Previews: PreviewProvider {
-    
+
     static var previews: some View {
         Group {
             field
@@ -71,7 +70,7 @@ struct SecureTextFieldWithReveal_Previews: PreviewProvider {
                 .environment(\.sizeCategory, .extraExtraExtraLarge)
         }
     }
-    
+
     static var field: some View {
         SecureTextFieldWithReveal("Password", text: .constant("test"))
     }

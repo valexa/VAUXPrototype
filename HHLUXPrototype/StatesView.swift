@@ -12,7 +12,7 @@ struct StatesView: View {
     var body: some View {
         List {
             Section("Ready") {
-                HStack (spacing: 10) {
+                HStack(spacing: 10) {
                     Button("Press to get a quote shown to my right") {
                     }
                     .buttonStyle(.standardPrimary)
@@ -22,7 +22,7 @@ struct StatesView: View {
                 }
             }
             Section("Loading") {
-                HStack (spacing: 10) {
+                HStack(spacing: 10) {
                     Button("I was pressed and am now disabled while loading") {
                     }
                     .buttonStyle(.standardPrimaryDisabled)
@@ -32,7 +32,7 @@ struct StatesView: View {
 
             }
             Section("Error") {
-                HStack (spacing: 10) {
+                HStack(spacing: 10) {
                     Button("I was pressed and got a error") {
                     }
                     .buttonStyle(.standardPrimary)
@@ -41,7 +41,7 @@ struct StatesView: View {
                 }
             }
             Section("Success") {
-                HStack (spacing: 10) {
+                HStack(spacing: 10) {
                     Button("I was pressed and got a quote") {
                     }
                     .buttonStyle(.standardPrimary)
@@ -50,7 +50,7 @@ struct StatesView: View {
                 }
             }
             Section(header: Text("Empty"), footer: details) {
-                HStack (spacing: 10) {
+                HStack(spacing: 10) {
                     Button("I was pressed but did not find a quote") {
                     }
                     .buttonStyle(.standardPrimary)

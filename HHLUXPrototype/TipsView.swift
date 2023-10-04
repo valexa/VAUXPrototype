@@ -75,7 +75,7 @@ struct TipsView: View {
             .padding()
         }
         .task {
-            try? Tips.configure ([
+            try? Tips.configure([
                 .displayFrequency(.immediate),
                 .datastoreLocation(.applicationDefault)
             ])

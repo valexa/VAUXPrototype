@@ -39,7 +39,7 @@ struct SymbolsView: View {
             .colorMultiply(.blue.mix(with: .white, amount: 0.5))
             .padding(.horizontal)
         ScrollView {
-            LazyVStack (alignment: .leading) {
+            LazyVStack(alignment: .leading) {
                 iconslist
             }
         }
@@ -49,7 +49,7 @@ struct SymbolsView: View {
 
     var iconslist: some View {
         ForEach(searchResults, id: \.self) { element in
-            HStack (alignment: .center) {
+            HStack(alignment: .center) {
                 Image(systemName: element)
                     .symbolRenderingMode(multicolor ? .multicolor : .monochrome)
                     .fontWeight(weight)

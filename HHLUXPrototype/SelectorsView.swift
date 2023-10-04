@@ -66,19 +66,19 @@ struct SelectorsView: View {
 
     var form: some View {
         List {
-            Section (header: inlineLegend) {
+            Section(header: inlineLegend) {
                 inline
                     .ifModifier(isColored) { view in
                         view.colorMultiply(.orange)
                     }
             }
-            Section (header: segmentedLegend) {
+            Section(header: segmentedLegend) {
                 segmented
                     .ifModifier(isColored) { view in
                         view.colorMultiply(.orange)
                     }
             }
-            Section (header: wheelLegend) {
+            Section(header: wheelLegend) {
                 wheel
                     .ifModifier(isColored) { view in
                         view.colorMultiply(.orange)
@@ -86,13 +86,13 @@ struct SelectorsView: View {
                     .frame(height: 100)
 
             }
-            Section (header: menuLegend) {
+            Section(header: menuLegend) {
                 menu
                     .ifModifier(isColored) { view in
                         view.colorMultiply(.orange)
                     }
             }
-            Section (header: navigationLegend) {
+            Section(header: navigationLegend) {
                 navigation
                     .ifModifier(isColored) { view in
                         view.colorMultiply(.orange)
@@ -161,7 +161,6 @@ struct SelectorsView: View {
         }
         .pickerStyle(.menu)
     }
-
 
 }
 

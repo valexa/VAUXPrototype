@@ -44,7 +44,7 @@ struct PopupsView: View {
     }
 
     var presentation: some View {
-        Section ("Presentation options"){
+        Section("Presentation options") {
             Button("Modal") {
                 isShowingPop.toggle()
             }
@@ -66,7 +66,7 @@ struct PopupsView: View {
             }
         }
     }
-    
+
 }
 
 struct PopupsView_Previews: PreviewProvider {

@@ -15,7 +15,7 @@ struct InputView: View {
     @State var typing = false
 
     var feedback: some View {
-        Image(systemName:"rectangle.stack")
+        Image(systemName: "rectangle.stack")
             .symbolEffect(.bounce.byLayer, value: typing)
     }
 
@@ -51,7 +51,6 @@ struct InputView: View {
         .background(Color(UIColor.secondarySystemBackground))
     }
 
-
 }
 
 struct InputView_Previews: PreviewProvider {
@@ -59,4 +58,3 @@ struct InputView_Previews: PreviewProvider {
         InputView()
     }
 }
-

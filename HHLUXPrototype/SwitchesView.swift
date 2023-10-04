@@ -26,7 +26,7 @@ struct SwitchesView: View {
     var body: some View {
         List {
             Section {
-                VStack (alignment: .leading) {
+                VStack(alignment: .leading) {
                     Toggle("Switch Toggle (orange tint)", isOn: $appSettings.defaults.orangeTint)
                         .toggleStyle(.switch)
                     Toggle("Button Toggle (orange tint)", isOn: $appSettings.defaults.orangeTint)
@@ -42,10 +42,10 @@ struct SwitchesView: View {
             Section {
                 progress
             }
-            Section ("Gauges") {
+            Section("Gauges") {
                 gauges
             }
-            Section ("Variable Symbols"){
+            Section("Variable Symbols") {
                 symbols
             }
         }
@@ -97,13 +97,9 @@ struct SwitchesView: View {
         HStack {
             Text("Slider: \(Int(speed))")
                 .foregroundColor(isEditing ? .gray : .black)
-            Slider(
-                value: $speed,
-                in: 0...100,
-                onEditingChanged: { editing in
-                    isEditing = editing
-                }
-            )
+            Slider(value: $speed, in: 0...100) { editing in
+                isEditing = editing
+            }
         }
     }
 

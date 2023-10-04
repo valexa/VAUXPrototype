@@ -8,7 +8,6 @@
 import SwiftUI
 import Combine
 
-
 struct CtaView: View {
 
     @ObservedObject private var backend = SimulatedBackendSingleton.sharedInstance
@@ -26,11 +25,11 @@ struct CtaView: View {
 
     func changeColor(_ item: FavoriteItem) {
         guard !item.isLiked else { return }
-        selectedColor = colors[Int(arc4random_uniform(10))]
+        selectedColor = colors[Int.random(in: 0..<10)]
     }
 
     var body: some View {
-        HStack (alignment: .center, spacing: 30) {
+        HStack(alignment: .center, spacing: 30) {
             fav1
                 .environment(\.isEnabled, !favorite1.isDisabled)
             fav4
@@ -48,8 +47,8 @@ struct CtaView: View {
     }
 
     var fav0: some View {
-        Image(systemName: favorite0.isDisabled ? favorite0.isFailed ? favorite0.iconFailure: favorite0.iconSuccess : favorite0.icon)
-            .onTapGesture() {
+        Image(systemName: favorite0.isDisabled ? favorite0.isFailed ? favorite0.iconFailure : favorite0.iconSuccess : favorite0.icon)
+            .onTapGesture {
                 withAnimation {
                     changeColor(favorite0)
                     Task { await favorite0.heartTap() }
@@ -61,7 +60,7 @@ struct CtaView: View {
 
     var fav1: some View {
         Image(systemName: favorite1.icon)
-            .onTapGesture() {
+            .onTapGesture {
                 withAnimation {
                     changeColor(favorite1)
                     Task { await favorite1.heartTapSpammable() }
@@ -73,7 +72,7 @@ struct CtaView: View {
     var fav2: some View {
         Image(systemName: favorite2.icon)
             .opacity(favorite2.isDisabled ? 0.5 : 1)
-            .onTapGesture() {
+            .onTapGesture {
                 changeColor(favorite2)
                 UIImpactFeedbackGenerator(style: .soft).impactOccurred()
 //                .sensoryFeedback(.success, trigger: taskIsComplete)
@@ -83,7 +82,7 @@ struct CtaView: View {
                 }
             }
             .foregroundColor(favorite2.isLiked ? selectedColor : Color.secondary)
-            .overlay{
+            .overlay {
                 if favorite2.isDisabled {
                     progress
                         .offset(y: 2.5)
@@ -137,9 +136,9 @@ struct CtaView_Previews: PreviewProvider {
     }
 }
 
-
 struct AntiSpamModifier: ViewModifier {
     @Environment(\.isEnabled) var isEnabled
+
     func body(content: Content) -> some View {
         content
             .allowsHitTesting(isEnabled)

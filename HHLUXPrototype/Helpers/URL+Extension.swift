@@ -30,9 +30,9 @@ extension URL {
     static func folderURL(for type: FolderType) throws -> URL {
         let fileManager = FileManager.default
         var url: URL
-        
+
         let offlineDataDir = URL.documentsDirectory.appending(path: type.rawValue)
-        
+
         try fileManager.createDirectory(
             at: offlineDataDir,
             withIntermediateDirectories: true,

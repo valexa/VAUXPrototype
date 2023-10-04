@@ -23,49 +23,49 @@ struct HapticsView: View {
     var list: some View {
         List {
             Section {
-                Button ("Soft impact") {
+                Button("Soft impact") {
                     UIImpactFeedbackGenerator(style: .soft).impactOccurred()
                 }
-                Button ("Rigid impact") {
+                Button("Rigid impact") {
                     UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
                 }
             }
             Section {
-                Button ("Light impact") {
+                Button("Light impact") {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 }
-                Button ("Medium impact") {
+                Button("Medium impact") {
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 }
-                Button ("Heavy impact") {
+                Button("Heavy impact") {
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                 }
             }
             Section {
-                Button ("Success notification") {
+                Button("Success notification") {
                     UINotificationFeedbackGenerator().notificationOccurred(.success)
                 }
-                Button ("Warning notification") {
+                Button("Warning notification") {
                     UINotificationFeedbackGenerator().notificationOccurred(.warning)
                 }
-                Button ("Error notification") {
+                Button("Error notification") {
                     UINotificationFeedbackGenerator().notificationOccurred(.error)
                 }
             }
-            Section ("custom") {
-                Button ("Boing") {
+            Section("custom") {
+                Button("Boing") {
                     playCustom(filename: "Boing")
                 }
-                Button ("Heartbeat") {
+                Button("Heartbeat") {
                     playCustom(filename: "Heartbeat")
                 }
-                Button ("Inflate") {
+                Button("Inflate") {
                     playCustom(filename: "Inflate")
                 }
-                Button ("Rumble") {
+                Button("Rumble") {
                     playCustom(filename: "Rumble")
                 }
-                Button ("Oscillate") {
+                Button("Oscillate") {
                     playCustom(filename: "Oscillate")
                 }
             }

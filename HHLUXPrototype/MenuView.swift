@@ -61,7 +61,7 @@ struct MenuView_Previews: PreviewProvider {
     }
 }
 
-private extension MenuView {
+extension MenuView {
 
     @ViewBuilder var testContextMenu: some View {
         Menu("Nested Menu") {
@@ -76,7 +76,7 @@ private extension MenuView {
         }
 
         Button {
-            //open url
+            // open url
         } label: {
             Label("Open in Safari", systemImage: "safari")
         }
@@ -84,7 +84,7 @@ private extension MenuView {
         ShareLink(item: URL(string: "http://apple.com")!)
 
         Button(role: .destructive) {
-            //delete bookmark
+            // delete bookmark
         } label: {
             Label("Delete", systemImage: "minus.circle")
         }

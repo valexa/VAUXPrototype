@@ -16,7 +16,7 @@ struct Provider: AppIntentTimelineProvider {
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
         SimpleEntry(date: Date(), configuration: configuration)
     }
-    
+
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
         var entries: [SimpleEntry] = []
 
@@ -37,7 +37,7 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationAppIntent
 }
 
-struct ProtoWidgetEntryView : View {
+struct ProtoWidgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
@@ -45,8 +45,8 @@ struct ProtoWidgetEntryView : View {
             Text("Time:")
             Text(entry.date, style: .time)
 
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
+            Text("Icon:")
+            Image(systemName: entry.configuration.icon)
         }
     }
 }
@@ -63,15 +63,15 @@ struct ProtoWidget: Widget {
 }
 
 extension ConfigurationAppIntent {
-    fileprivate static var smiley: ConfigurationAppIntent {
+    static var hand: ConfigurationAppIntent {
         let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "😀"
+        intent.icon = "hand.tap"
         return intent
     }
-    
-    fileprivate static var starEyes: ConfigurationAppIntent {
+
+    static var eye: ConfigurationAppIntent {
         let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "🤩"
+        intent.icon = "eye"
         return intent
     }
 }
@@ -79,6 +79,6 @@ extension ConfigurationAppIntent {
 #Preview(as: .systemSmall) {
     ProtoWidget()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .smiley)
-    SimpleEntry(date: .now, configuration: .starEyes)
+    SimpleEntry(date: .now, configuration: .hand)
+    SimpleEntry(date: .now, configuration: .eye)
 }

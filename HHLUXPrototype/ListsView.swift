@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Tree<Value: Hashable>: Hashable {
     let value: Value
-    var children: [Tree]? = nil
+    var children: [Tree]?
 }
 
 struct ListsView: View {
@@ -21,7 +21,7 @@ struct ListsView: View {
     @EnvironmentObject private var appSettings: AppSettings
 
     @ViewBuilder func makeLegend(label: String, types: [LegendView.Types] = [.style, .color]) -> some View {
-        legend.makeLegend(label: "List with "+label, types: types)
+        legend.makeLegend(label: "List with " + label, types: types)
     }
 
     let categories: [Tree<String>] = [
@@ -38,7 +38,7 @@ struct ListsView: View {
                         Tree(value: "Ow much"),
                         Tree(value: "Ow come")
                     ]
-                ),
+                )
             ]
         ),
         Tree(
@@ -60,7 +60,7 @@ struct ListsView: View {
 
     var body: some View {
         List {
-            Section (header: makeLegend(label: "no sections")) {
+            Section(header: makeLegend(label: "no sections")) {
                 List {
                     Text("one")
                     Text("two")
@@ -68,7 +68,7 @@ struct ListsView: View {
                 .frame(height: 150)
                 .listRowBackground(Color.clear)
             }
-            Section (header: makeLegend(label: "no sections plain")) {
+            Section(header: makeLegend(label: "no sections plain")) {
                 List {
                     Text("one")
                     Text("two")
@@ -77,7 +77,7 @@ struct ListsView: View {
                 .frame(height: 150)
                 .listRowBackground(Color.clear)
             }
-            Section (header: makeLegend(label: "sections")) {
+            Section(header: makeLegend(label: "sections")) {
                 List {
                     Section("section one") {
                         Text("one")
@@ -90,7 +90,7 @@ struct ListsView: View {
                 .frame(height: 200)
                 .listRowBackground(Color.clear)
             }
-            Section (header: makeLegend(label: "plain sections")) {
+            Section(header: makeLegend(label: "plain sections")) {
                 List {
                     Section("section one") {
                         Text("one")
@@ -103,7 +103,7 @@ struct ListsView: View {
                 .frame(height: 200)
                 .listRowBackground(Color.clear)
             }
-            Section (header: makeLegend(label: "inset sections")) {
+            Section(header: makeLegend(label: "inset sections")) {
                 List {
                     Section("section one") {
                         Text("one")
@@ -116,7 +116,7 @@ struct ListsView: View {
                 .frame(height: 200)
                 .listRowBackground(Color.clear)
             }
-            Section (header: makeLegend(label: "outline group")) {
+            Section(header: makeLegend(label: "outline group")) {
                 List {
                     ForEach(categories, id: \.self) { section in
                         Section(header: Text(section.value)) {
@@ -133,7 +133,7 @@ struct ListsView: View {
                 }
                 .frame(height: 400)
             }
-            Section (header: makeLegend(label: "split navigation")) {
+            Section(header: makeLegend(label: "split navigation")) {
                 split
             }
         }

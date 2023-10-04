@@ -57,17 +57,17 @@ struct ProtoWidgetLiveActivity: Widget {
 }
 
 extension ProtoWidgetAttributes {
-    fileprivate static var preview: ProtoWidgetAttributes {
+    static var preview: ProtoWidgetAttributes {
         ProtoWidgetAttributes(name: "World")
     }
 }
 
 extension ProtoWidgetAttributes.ContentState {
-    fileprivate static var smiley: ProtoWidgetAttributes.ContentState {
+    static var smiley: ProtoWidgetAttributes.ContentState {
         ProtoWidgetAttributes.ContentState(emoji: "😀")
      }
-     
-     fileprivate static var starEyes: ProtoWidgetAttributes.ContentState {
+
+     static var starEyes: ProtoWidgetAttributes.ContentState {
          ProtoWidgetAttributes.ContentState(emoji: "🤩")
      }
 }

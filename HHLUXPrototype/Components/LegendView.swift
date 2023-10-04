@@ -23,7 +23,7 @@ struct LegendView: View {
         HStack {
             Text(label)
             Spacer()
-            ForEach (types, id: \.self) { type in
+            ForEach(types, id: \.self) { type in
                 if type == .label { buttonLabel }
                 if type == .scale { buttonScale }
                 if type == .style { buttonStyle }

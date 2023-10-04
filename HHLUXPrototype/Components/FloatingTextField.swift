@@ -1,6 +1,5 @@
 //
 //  FloatingTextField.swift
-//  carolinegirvan
 //
 //  Created by Rajat Kumar - Work on 12/05/22.
 //  Copyright © 2022 hedgehog lab. All rights reserved.
@@ -60,7 +59,7 @@ struct FloatingTextField: View {
 
     private var rectangle: some View {
         RoundedRectangle(cornerRadius: style.cornerRadius)
-            .stroke(focusedField == .current ? style.borderColorWhenFocused : style.borderColor , lineWidth: style.borderWidth)
+            .stroke(focusedField == .current ? style.borderColorWhenFocused : style.borderColor, lineWidth: style.borderWidth)
     }
 
     private var textField: some View {
@@ -166,4 +165,3 @@ struct FloatingTextFieldStyle {
     var placeholderColor: Color = .primary
     var textColor: Color = .primary
 }
-

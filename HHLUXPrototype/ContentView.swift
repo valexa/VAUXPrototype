@@ -51,7 +51,7 @@ struct ContentView: View {
             setAppearance()
         }
         .task {
-            try? Tips.configure ([
+            try? Tips.configure([
                 .displayFrequency(.immediate),
                 .datastoreLocation(.applicationDefault)
             ])
@@ -127,12 +127,12 @@ struct ContentView: View {
     }
 
     func setAppearance() {
-        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont.systemFont(ofSize: 20, weight: .ultraLight)]
-        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont.systemFont(ofSize:34, weight: .ultraLight)]
+        UINavigationBar.appearance().titleTextAttributes = [.font: UIFont.systemFont(ofSize: 20, weight: .ultraLight)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font: UIFont.systemFont(ofSize: 34, weight: .ultraLight)]
     }
 
     var shakeButton: some View {
-        Button (action: {
+        Button(action: {
             withAnimation {
                 shake.toggle()
             }
@@ -144,7 +144,7 @@ struct ContentView: View {
 
     func determineGearIcon() -> String {
         let hour = Calendar.current.component(.hour, from: Date())
-        
+
         if hour >= 0 && hour < 12 {
             return "gearshape"
         } else if hour >= 12 && hour < 17 {
@@ -178,7 +178,7 @@ struct ContentView: View {
     var sidebarList: some View {
         List {
             Section {
-                ForEach (model[category: .primary]) {
+                ForEach(model[category: .primary]) {
                     ProtoypeLink(type: $0)
                 }
                 if UIDevice.current.userInterfaceIdiom == .pad {
@@ -186,18 +186,18 @@ struct ContentView: View {
                 }
             }
             Section {
-                ForEach (model[category: .secondary]) {
+                ForEach(model[category: .secondary]) {
                     ProtoypeLink(type: $0)
                 }
             }
             Section {
-                ForEach (model[category: .extra]) {
+                ForEach(model[category: .extra]) {
                     ProtoypeLink(type: $0)
                 }
             }
             if UIDevice.current.userInterfaceIdiom == .pad {
                 Section {
-                    ForEach (model[category: .ipad]) {
+                    ForEach(model[category: .ipad]) {
                         ProtoypeLink(type: $0)
                     }
                 }

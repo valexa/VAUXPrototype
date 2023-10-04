@@ -7,10 +7,9 @@ Saving and Loading App defaults from file
 
 import UIKit
 
-
 struct AppDefaults: Codable, Equatable {
 
-    var name: String 
+    var name: String
 
     var lightMode = true
 
@@ -21,11 +20,10 @@ extension AppDefaults {
     static let standard = AppDefaults(name: "Default")
 }
 
-
 @MainActor class AppSettings: ObservableObject {
-    
+
     @Published var defaults = AppDefaults.standard
-    
+
     private let settingsIO = SettingsIO()
 
 }
@@ -33,7 +31,7 @@ extension AppDefaults {
 // MARK: - AppSettings API
 
 extension AppSettings {
-        
+
     func load() async {
         defaults = await settingsIO.load()
     }
@@ -45,7 +43,7 @@ extension AppSettings {
 
 // MARK: - AppSettings.IO
 
-private extension AppSettings {
+extension AppSettings {
     actor SettingsIO {}
 }
 

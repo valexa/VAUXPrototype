@@ -17,23 +17,23 @@ struct PickersView: View {
 
     var body: some View {
         List {
-            Section ("Color Picker") {
+            Section("Color Picker") {
                 ColorPicker(bgColor.description, selection: $bgColor)
             }
-            Section ("Multi Date picker") {
+            Section("Multi Date picker") {
                 VStack {
                     MultiDatePicker("Select your preferred dates", selection: $dates)
                     Text(datesSummary)
                 }
                 .padding()
             }
-            Section ("Page control horizontal") {
+            Section("Page control horizontal") {
                 pages
             }
-            Section ("Page control vertical"){
+            Section("Page control vertical") {
                 pagesRotated
             }
-            Section ("Share links"){
+            Section("Share links") {
                 ShareLink(item: URL(string: "http://apple.com")!)
                 ShareLink(item: URL(string: "http://apple.com")!) {
                     Label("Custom icon share", systemImage: "rectangle.3.group.bubble.left.fill")
@@ -56,8 +56,8 @@ struct PickersView: View {
     var pages: some View {
         TabView {
             Group {
-                ForEach(1..<7) { c in
-                    Text("Page \(c)")
+                ForEach(1..<7) { index in
+                    Text("Page \(index)")
                 }
             }
         }
@@ -68,8 +68,8 @@ struct PickersView: View {
     var pagesRotated: some View {
         TabView {
             Group {
-                ForEach(1..<7) { c in
-                    Text("Page \(c)")
+                ForEach(1..<7) { index in
+                    Text("Page \(index)")
                 }
             }
             .rotationEffect(Angle(degrees: -90))

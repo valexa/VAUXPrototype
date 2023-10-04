@@ -26,7 +26,7 @@ class HHLAppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
         let defaults = UserDefaults.standard
         let items = defaults.value(forKey: "shortcutItems")
         if items == nil {
-            let list = PrototypesList()[category: .secondary].compactMap{ $0.rawValue }
+            let list = PrototypesList()[category: .secondary].compactMap { $0.rawValue }
             defaults.setValue(list, forKey: "shortcutItems")
         }
     }
@@ -46,6 +46,4 @@ class HHLAppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
         return sceneConfig
     }
 
-
 }
-
