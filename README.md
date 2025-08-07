@@ -37,11 +37,10 @@ The main app is enabled for multitasking on iPadOS and MacOS, implicit multitask
 
 Implements a functional App clip target that is referencing the entirety of the main app, the relevant settings are inside VAUXPrototype.entitlements and on external apple-app-site-association files
 
-## App shortcuts implementation
+## App shortcuts, SidebarCommands, context menus
 
-Implements a functional App clip target that is referencing the entirety of the main app, the relevant settings are inside VAUXPrototype.entitlements and on external apple-app-site-association files
 ![shortcuts screenshot](https://github.com/user-attachments/assets/6cf5f051-3f3e-49fd-87b9-380a34c139a5 "Shortcuts")
-
+![Springboard screenshot](https://github.com/user-attachments/assets/d3c38f3b-2e83-40d6-a07f-1b1a216d6cc8 "Springboard")
 
 ## SwiftData implementation
 
