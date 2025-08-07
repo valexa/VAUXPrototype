@@ -46,6 +46,7 @@
 		F5043B0A2A8CC68E003E18B3 /* Inflate.ahap in Resources */ = {isa = PBXBuildFile; fileRef = F5E668EE2A8A1CDA000FE2BF /* Inflate.ahap */; };
 		F5043B0B2A8CC68E003E18B3 /* Oscillate.ahap in Resources */ = {isa = PBXBuildFile; fileRef = F5E668EB2A8A1CDA000FE2BF /* Oscillate.ahap */; };
 		F5043B0C2A8CC68E003E18B3 /* Boing.ahap in Resources */ = {isa = PBXBuildFile; fileRef = F5E668EC2A8A1CDA000FE2BF /* Boing.ahap */; };
+		F50D0C0D2E44B50E00DB52F6 /* vauxproto.icon in Resources */ = {isa = PBXBuildFile; fileRef = F50D0C0C2E44B50E00DB52F6 /* vauxproto.icon */; };
 		F53271BC2A8B7A150053324A /* CtaViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53271BB2A8B7A150053324A /* CtaViewList.swift */; };
 		F53271BE2A8B88EC0053324A /* SimulatedBackendSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53271BD2A8B88EC0053324A /* SimulatedBackendSingleton.swift */; };
 		F53271C02A8BB29C0053324A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53271BF2A8BB29C0053324A /* SettingsView.swift */; };
@@ -187,6 +188,7 @@
 		F5043AD52A8CC540003E18B3 /* HHLUXAppClipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHLUXAppClipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5043AD92A8CC540003E18B3 /* HHLUXAppClipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHLUXAppClipUITests.swift; sourceTree = "<group>"; };
 		F5043ADB2A8CC540003E18B3 /* HHLUXAppClipUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHLUXAppClipUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F50D0C0C2E44B50E00DB52F6 /* vauxproto.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = vauxproto.icon; sourceTree = "<group>"; };
 		F52BB15B2ACD5BEF0047913A /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		F53271BB2A8B7A150053324A /* CtaViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtaViewList.swift; sourceTree = "<group>"; };
 		F53271BD2A8B88EC0053324A /* SimulatedBackendSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatedBackendSingleton.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 		F5FA0FC72A84DF7F00260BA5 = {
 			isa = PBXGroup;
 			children = (
+				F50D0C0C2E44B50E00DB52F6 /* vauxproto.icon */,
 				F5FA0FEF2A84E9FD00260BA5 /* README.md */,
 				F52BB15B2ACD5BEF0047913A /* .swiftlint.yml */,
 				F5FA0FD22A84DF7F00260BA5 /* VAUXPrototype */,
@@ -710,6 +713,7 @@
 				F5E668F12A8A1CDA000FE2BF /* Rumble.ahap in Resources */,
 				F5E668F22A8A1CDA000FE2BF /* Oscillate.ahap in Resources */,
 				F5FA0FD82A84DF8000260BA5 /* Assets.xcassets in Resources */,
+				F50D0C0D2E44B50E00DB52F6 /* vauxproto.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1308,8 +1312,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = vauxproto;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = VAUXPrototype/VAUXPrototype.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
@@ -1355,8 +1360,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = vauxproto;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = VAUXPrototype/VAUXPrototype.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";

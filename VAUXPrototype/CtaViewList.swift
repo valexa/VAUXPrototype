@@ -18,6 +18,7 @@ struct CtaViewList: View {
             explaination
             VStack {
                 Toggle("Simulate backend failure", isOn: $backend.willFail)
+                    .padding(.bottom)
                 Toggle("Simulate backend timeout", isOn: $backend.willTimeout)
             }
             .tint(.blue.mix(with: .white, amount: 0.5))

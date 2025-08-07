@@ -16,6 +16,11 @@ The codebase unless otherwise noted is covered by the Apache 2.0 license, for fu
 
 This codebase contains portions of Apple sample code and freely available code from other source as noted in the respective files
 
+## Call to Action animations and progress tracking
+Call to action buttons are often allowed to trigger asyncronous actions more than once if tapped fast enough or if a unexpected network condition happens and have no built in progress tracking, my prototype proposes 5 implementations
+
+![buttons screenshot](https://github.com/user-attachments/assets/fd0e82c6-cd93-491b-bbb3-6532a7849a3e "Call to Action")
+
 ## Web Credentials implementation
 
 This codebase contains a Web Credentials implementation, the relevant settings are inside VAUXPrototype.entitlements and on external apple-app-site-association files
@@ -24,7 +29,9 @@ This codebase contains a Web Credentials implementation, the relevant settings a
 
 The main app is enabled for multitasking on iPadOS and MacOS, implicit multitasking window opening is implemented by means of `SwiftUI.OpenWindowAction` and `UIApplication.shared.requestSceneSessionActivation()` with `View.onContinueUserActivity(){}` for center windows 
 
-![multitasking screenshot](https://github.com/user-attachments/assets/6e01eb28-205e-44bd-8297-ec72084a952e "Multitasking")
+![old multitasking screenshot](https://github.com/user-attachments/assets/6e01eb28-205e-44bd-8297-ec72084a952e "Old Multitasking")
+
+![ios26 multitasking screenshot](https://github.com/user-attachments/assets/2c730bc1-d02d-4fe8-b68d-038b833eec50 "New Multitasking")
 
 ## App clip implementation
 
