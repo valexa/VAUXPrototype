@@ -1,0 +1,30 @@
+{
+  "configurations" : [
+    {
+      "id" : "345D55E1-96B9-488A-B610-937F6C0B17E6",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:VAUXPrototype.xcodeproj",
+      "identifier" : "F5FA0FCF2A84DF7F00260BA5",
+      "name" : "VAUXPrototype"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:VAUXPrototype.xcodeproj",
+        "identifier" : "F57AE32B2AA239E1004F8609",
+        "name" : "VAUXPrototypeTests"
+      }
+    }
+  ],
+  "version" : 1
+}
