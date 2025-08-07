@@ -83,7 +83,11 @@ enum Prototype: String, CaseIterable, Codable, Identifiable {
         case .tips: TipsView()
         case .lists: ListsView()
         case .menus: MenuView()
+#if os(iOS)
         case .haptics: HapticsView()
+#else
+        case .haptics: EmptyView()
+#endif
         case .loading: LoadView()
         case .states: StatesView()
         case .symbols: SymbolsView()

@@ -74,7 +74,9 @@ struct CtaView: View {
             .opacity(favorite2.isDisabled ? 0.5 : 1)
             .onTapGesture {
                 changeColor(favorite2)
+#if os(iOS)
                 UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+#endif
 //                .sensoryFeedback(.success, trigger: taskIsComplete)
                 Task {
                     await favorite2.heartTap()

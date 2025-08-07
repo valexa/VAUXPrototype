@@ -8,6 +8,8 @@
 import SwiftUI
 import CoreHaptics
 
+#if os(iOS)
+
 struct HapticsView: View {
 
     @State private var engine: CHHapticEngine?
@@ -96,3 +98,5 @@ struct HapticsView_Previews: PreviewProvider {
         HapticsView()
     }
 }
+
+#endif
