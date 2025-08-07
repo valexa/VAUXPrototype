@@ -24,7 +24,7 @@ This codebase contains a Web Credentials implementation, the relevant settings a
 
 The main app is enabled for multitasking on iPadOS and MacOS, implicit multitasking window opening is implemented by means of `SwiftUI.OpenWindowAction` and `UIApplication.shared.requestSceneSessionActivation()` with `View.onContinueUserActivity(){}` for center windows 
 
-![multitasking screenshot](https://github.com/valexa/VAUXPrototype/assets/96238834/ff335e24-43ee-44ef-b3e1-5d4cc171d0c4 "Multitasking")
+![multitasking screenshot](https://github.com/user-attachments/assets/6e01eb28-205e-44bd-8297-ec72084a952e "Multitasking")
 
 ## App clip implementation
 
@@ -33,7 +33,7 @@ Implements a functional App clip target that is referencing the entirety of the 
 ## App shortcuts implementation
 
 Implements a functional App clip target that is referencing the entirety of the main app, the relevant settings are inside VAUXPrototype.entitlements and on external apple-app-site-association files
-![shortcuts screenshot](https://github.com/valexa/VAUXPrototype/assets/96238834/6873ee90-e2e2-47db-9c9e-91b2ae3335fd "Shortcuts")
+![shortcuts screenshot](https://github.com/user-attachments/assets/6cf5f051-3f3e-49fd-87b9-380a34c139a5 "Shortcuts")
 
 
 ## SwiftData implementation
