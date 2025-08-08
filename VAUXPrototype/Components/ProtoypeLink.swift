@@ -12,8 +12,6 @@ struct ProtoypeLink: View {
     @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
     @Environment(\.openWindow) private var openWindow
 
-    @UIApplicationDelegateAdaptor(HHLAppDelegate.self) var delegate
-
     @State var type: Prototype
 
     @State var persistent = false
@@ -95,3 +93,4 @@ struct ProtoypeLink_Previews: PreviewProvider {
         }
     }
 }
+

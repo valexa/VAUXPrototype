@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 90;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -82,24 +82,20 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		F5043AE02A8CC540003E18B3 /* Embed App Clips */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
-			dstSubfolderSpec = 16;
+			dstSubfolder = Product;
 			files = (
 			);
 			name = "Embed App Clips";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F537FEBC2ABCD41800CD0F58 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 13;
+			dstSubfolder = PlugIns;
 			files = (
 				F537FEBB2ABCD41800CD0F58 /* ProtoWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -168,32 +164,30 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F5313ABF2E465A3900395606 /* VAUXPrototypeTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = VAUXPrototypeTests; sourceTree = "<group>"; };
+		F5313ABF2E465A3900395606 /* VAUXPrototypeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VAUXPrototypeTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F537FEA42ABCD41700CD0F58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F537FEAC2ABCD41700CD0F58 /* SwiftUI.framework in Frameworks */,
 				F537FEAA2ABCD41700CD0F58 /* WidgetKit.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F57AE3292AA239E1004F8609 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F5FA0FCD2A84DF7F00260BA5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -344,8 +338,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = ProtoWidgetExtension;
 			productName = ProtoWidgetExtension;
 			productReference = F537FEA72ABCD41700CD0F58 /* ProtoWidgetExtension.appex */;
@@ -399,8 +391,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = VAUX;
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
+				ORGANIZATIONNAME = VA;
 				TargetAttributes = {
 					F537FEA62ABCD41700CD0F58 = {
 						CreatedOnToolsVersion = 15.0;
@@ -416,7 +410,6 @@
 				};
 			};
 			buildConfigurationList = F5FA0FCB2A84DF7F00260BA5 /* Build configuration list for PBXProject "VAUXPrototype" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -424,6 +417,8 @@
 				Base,
 			);
 			mainGroup = F5FA0FC72A84DF7F00260BA5;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 90;
 			productRefGroup = F5FA0FD12A84DF7F00260BA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -438,22 +433,17 @@
 /* Begin PBXResourcesBuildPhase section */
 		F537FEA52ABCD41700CD0F58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F537FEB72ABCD41800CD0F58 /* Assets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F57AE32A2AA239E1004F8609 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F5FA0FCE2A84DF7F00260BA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F5E668F42A8A1CDA000FE2BF /* Drums.wav in Resources */,
 				F5FA0FDC2A84DF8000260BA5 /* Preview Assets.xcassets in Resources */,
@@ -467,7 +457,6 @@
 				F5FA0FD82A84DF8000260BA5 /* Assets.xcassets in Resources */,
 				F50D0C0D2E44B50E00DB52F6 /* vauxproto.icon in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
@@ -475,46 +464,40 @@
 		F52BB15A2ACD59830047913A /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
 			name = Swiftlint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = (
+				"if [[ \"$(uname -m)\" == arm64 ]]; then",
+				"    export PATH=\"/opt/homebrew/bin:$PATH\"",
+				"fi",
+				"",
+				"if which swiftlint > /dev/null; then",
+				"  swiftlint",
+				"else",
+				"  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"",
+				"fi",
+				"",
+			);
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F537FEA32ABCD41700CD0F58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F537FEAF2ABCD41700CD0F58 /* ProtoWidgetBundle.swift in Sources */,
 				F537FEB52ABCD41700CD0F58 /* AppIntent.swift in Sources */,
 				F537FEB32ABCD41700CD0F58 /* ProtoWidget.swift in Sources */,
 				F537FEB12ABCD41700CD0F58 /* ProtoWidgetLiveActivity.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F57AE3282AA239E1004F8609 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F5FA0FCC2A84DF7F00260BA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F5FA0FF12A84F7CA00260BA5 /* MenuView.swift in Sources */,
 				F5E668E72A8A15C7000FE2BF /* HapticsView.swift in Sources */,
@@ -551,7 +534,6 @@
 				F53271BE2A8B88EC0053324A /* SimulatedBackendSingleton.swift in Sources */,
 				F53271C02A8BB29C0053324A /* SettingsView.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -569,7 +551,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F537FEBD2ABCD41800CD0F58 /* Debug */ = {
+		F537FEBD2ABCD41800CD0F58 /* Debug configuration for PBXNativeTarget "ProtoWidgetExtension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -602,7 +584,7 @@
 			};
 			name = Debug;
 		};
-		F537FEBE2ABCD41800CD0F58 /* Release */ = {
+		F537FEBE2ABCD41800CD0F58 /* Release configuration for PBXNativeTarget "ProtoWidgetExtension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -635,7 +617,7 @@
 			};
 			name = Release;
 		};
-		F57AE3322AA239E1004F8609 /* Debug */ = {
+		F57AE3322AA239E1004F8609 /* Debug configuration for PBXNativeTarget "VAUXPrototypeTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -661,7 +643,7 @@
 			};
 			name = Debug;
 		};
-		F57AE3332AA239E1004F8609 /* Release */ = {
+		F57AE3332AA239E1004F8609 /* Release configuration for PBXNativeTarget "VAUXPrototypeTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -686,7 +668,7 @@
 			};
 			name = Release;
 		};
-		F5FA0FDD2A84DF8000260BA5 /* Debug */ = {
+		F5FA0FDD2A84DF8000260BA5 /* Debug configuration for PBXProject "VAUXPrototype" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -750,7 +732,7 @@
 			};
 			name = Debug;
 		};
-		F5FA0FDE2A84DF8000260BA5 /* Release */ = {
+		F5FA0FDE2A84DF8000260BA5 /* Release configuration for PBXProject "VAUXPrototype" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -807,7 +789,7 @@
 			};
 			name = Release;
 		};
-		F5FA0FE02A84DF8000260BA5 /* Debug */ = {
+		F5FA0FE02A84DF8000260BA5 /* Debug configuration for PBXNativeTarget "VAUXPrototype" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = vauxproto;
@@ -855,7 +837,7 @@
 			};
 			name = Debug;
 		};
-		F5FA0FE12A84DF8000260BA5 /* Release */ = {
+		F5FA0FE12A84DF8000260BA5 /* Release configuration for PBXNativeTarget "VAUXPrototype" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = vauxproto;
@@ -909,37 +891,33 @@
 		F537FEBF2ABCD41800CD0F58 /* Build configuration list for PBXNativeTarget "ProtoWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F537FEBD2ABCD41800CD0F58 /* Debug */,
-				F537FEBE2ABCD41800CD0F58 /* Release */,
+				F537FEBD2ABCD41800CD0F58 /* Debug configuration for PBXNativeTarget "ProtoWidgetExtension" */,
+				F537FEBE2ABCD41800CD0F58 /* Release configuration for PBXNativeTarget "ProtoWidgetExtension" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		F57AE3342AA239E1004F8609 /* Build configuration list for PBXNativeTarget "VAUXPrototypeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F57AE3322AA239E1004F8609 /* Debug */,
-				F57AE3332AA239E1004F8609 /* Release */,
+				F57AE3322AA239E1004F8609 /* Debug configuration for PBXNativeTarget "VAUXPrototypeTests" */,
+				F57AE3332AA239E1004F8609 /* Release configuration for PBXNativeTarget "VAUXPrototypeTests" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		F5FA0FCB2A84DF7F00260BA5 /* Build configuration list for PBXProject "VAUXPrototype" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F5FA0FDD2A84DF8000260BA5 /* Debug */,
-				F5FA0FDE2A84DF8000260BA5 /* Release */,
+				F5FA0FDD2A84DF8000260BA5 /* Debug configuration for PBXProject "VAUXPrototype" */,
+				F5FA0FDE2A84DF8000260BA5 /* Release configuration for PBXProject "VAUXPrototype" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		F5FA0FDF2A84DF8000260BA5 /* Build configuration list for PBXNativeTarget "VAUXPrototype" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F5FA0FE02A84DF8000260BA5 /* Debug */,
-				F5FA0FE12A84DF8000260BA5 /* Release */,
+				F5FA0FE02A84DF8000260BA5 /* Debug configuration for PBXNativeTarget "VAUXPrototype" */,
+				F5FA0FE12A84DF8000260BA5 /* Release configuration for PBXNativeTarget "VAUXPrototype" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */

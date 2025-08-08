@@ -11,9 +11,6 @@ import TipKit
 struct ContentView: View {
 
 //    @SceneStorage("ContentView.selectedTab")
-
-    @UIApplicationDelegateAdaptor(HHLAppDelegate.self) var delegate
-
     @EnvironmentObject private var appSettings: AppSettings
 
     @ObservedObject var model: PrototypesList
@@ -120,10 +117,10 @@ struct ContentView: View {
 
     @MainActor
     func openScene() {
-        if let shortcut = delegate.sideLoad {
-            openWindow(value: shortcut)
-            delegate.sideLoad = nil
-        }
+//        if let shortcut = delegate.sideLoad {
+//            openWindow(value: shortcut)
+//            delegate.sideLoad = nil
+//        }
     }
 
     func setAppearance() {
@@ -247,3 +244,4 @@ struct ContentView_Previews: PreviewProvider {
         .environmentObject(AppSettings())
     }
 }
+

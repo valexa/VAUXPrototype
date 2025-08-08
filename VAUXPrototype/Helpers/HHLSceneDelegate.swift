@@ -10,8 +10,6 @@ import SwiftUI
 
 class HHLSceneDelegate: NSObject, UIWindowSceneDelegate, ObservableObject {
 
-    @UIApplicationDelegateAdaptor(HHLAppDelegate.self) var delegate
-
     func sceneWillEnterForeground(_ scene: UIScene) {
 
     }
@@ -39,7 +37,6 @@ class HHLSceneDelegate: NSObject, UIWindowSceneDelegate, ObservableObject {
 
     func handleShortCutItem(_ item: UIApplicationShortcutItem) -> Bool {
         if let type = Prototype(shortcut: item) {
-            delegate.sideLoad = type
             print("Split new screen: " + type.rawValue)
             return true
         }
@@ -61,3 +58,4 @@ class HHLSceneDelegate: NSObject, UIWindowSceneDelegate, ObservableObject {
     }
 
 }
+
